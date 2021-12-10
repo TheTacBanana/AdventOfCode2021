@@ -36,6 +36,20 @@ def completebrackets(strIn):
     for c in strIn:
         if c in ["(", "{", "[", "<"]:
             stack.append(c)
+        else:
+            current_char = stack.pop()
+            if current_char == '(':
+                if c != ")":
+                    notfinishedtotal += bracketPoints[")"]
+            if current_char == '{':
+                if c != "}":
+                    notfinishedtotal += bracketPoints["}"]
+            if current_char == '[':
+                if c != "]":
+                    notfinishedtotal += bracketPoints["]"]
+            if current_char == '<':
+                if c != ">":
+                    notfinishedtotal += bracketPoints[">"]
 
     for i in range(len(stack)):
         char = stack.pop()
