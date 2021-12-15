@@ -27,7 +27,3 @@ maxc = max(counts, key = counts.get)
 minc = min(counts, key = counts.get)
 
 print(curpolymer.count(maxc) - curpolymer.count(minc))
-
-
-
-
